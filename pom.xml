@@ -19,6 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring.boot.version>2.7.14</spring.boot.version>
         <spring.cloud.version>2022.0.1</spring.cloud.version>
+        <spring.alibaba.nacos.version>2021.0.4.0</spring.alibaba.nacos.version>
         <mybatis.version>2.2.2</mybatis.version>
     </properties>
 
@@ -54,6 +55,13 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.alibaba.nacos.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>

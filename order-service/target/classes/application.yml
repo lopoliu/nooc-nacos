@@ -17,13 +17,9 @@ spring:
   application:
     name: orderService
 
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://127.0.0.1:8080/eureka
-
-ribbon:
-  eager-load:
-    enabled: true
-    clients: userService
+  cloud:
+    nacos:
+      server-addr: http://127.0.0.1:8848
+    loadbalancer:
+      nacos:
+        enabled: true
